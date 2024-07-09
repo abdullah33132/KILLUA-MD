@@ -416,15 +416,15 @@ global.reloadHandler = async function(restatConn) {
 
   // Para cambiar estos mensajes, solo los archivos en la carpeta de language, 
   // busque la clave "handler" dentro del json y cámbiela si es necesario
-  conn.welcome = '👋 ¡Bienvenido/a!\n@user';
-  conn.bye = '👋 ¡Hasta luego!\n@user';
-  conn.spromote = '*[ ℹ️ ] @user Fue promovido a administrador.*';
-  conn.sdemote = '*[ ℹ️ ] @user Fue degradado de administrador.*';
-  conn.sDesc = '*[ ℹ️ ] La descripción del grupo ha sido modificada.*';
-  conn.sSubject = '*[ ℹ️ ] El nombre del grupo ha sido modificado.*';
-  conn.sIcon = '*[ ℹ️ ] Se ha cambiado la foto de perfil del grupo.*';
-  conn.sRevoke = '*[ ℹ️ ] El enlace de invitación al grupo ha sido restablecido.*';
-
+  conn.welcome = '■━━━━━━[ KILLUA◇BOT ]━━━━━━■\n\n┏––––––━━━━━━━━•\n│⫹⫺ @group\n┣━━━━━━━━┅┅┅\n│( نورت يحب✨@user)\n├[ *المطور* ]—\n│ *JoAnimi*\n┗––––––━━┅┅┅\n\n––––––┅┅ *اقرأ الوصف* ┅┅––––––\n@desc';
+  conn.bye = '*╔══════════════*\n*╟❧ @user*\n*╟❧ هتغور هيجي غيرك طابور🚪 يلا مع السلامه😂*';
+  conn.spromote = '*[ 🎊 ] @user اصبحت زعيما يا معلم مبرووووك.*';
+  conn.sdemote = '*[ 😔 ] @user تمت اذالتك من لائحة المشرفين كنت ادمن فاشل.*';
+  conn.sDesc = '*[ 🎺 ] تم تغير وصف المجموعه.*';
+  conn.sSubject = '*[ 👌 ] تم تغير اسم الجروب.*';
+  conn.sIcon = '*[ 🖼 ] تم تغير صوره الجروب.*';
+  conn.sRevoke = '*[ 🔄 ] تم اعادت تهيت الرابط.*';
+  
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn);
