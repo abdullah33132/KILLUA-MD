@@ -18,7 +18,6 @@ global.owner = [
 
 global.suittag = ['201008599375'];
 global.prems = ['201008599375'];
-const _0x3d4f75=_0x51ac;function _0x5a88(){const _0x38ac9f=['saad','chats','metadata','924497uheGea','3057460vEzwHW','1882250qebvNS','1202922FOAomD','3zhzFSN','615629AzoFkD','2779812KsRrvv','15957728GAPaaW','map'];_0x5a88=function(){return _0x38ac9f;};return _0x5a88();}function _0x51ac(_0x2ca913,_0x483623){const _0x5992dc=_0x5a88();return _0x51ac=function(_0x44c6c1,_0x2d12e6){_0x44c6c1=_0x44c6c1-(0x1a6*-0x5+0x2526+0x19c*-0x11);let _0x154f92=_0x5992dc[_0x44c6c1];return _0x154f92;},_0x51ac(_0x2ca913,_0x483623);}(function(_0x834252,_0x3ea08c){const _0x17d3eb=_0x51ac,_0xb23a27=_0x834252();while(!![]){try{const _0x5c941f=-parseInt(_0x17d3eb(0x18e))/(-0x1d03*0x1+-0x1*0xf3f+0x4eb*0x9)+parseInt(_0x17d3eb(0x18c))/(0x162c+0x1b35+0x1*-0x315f)+-parseInt(_0x17d3eb(0x18d))/(0xfb7+0x170d+-0x26c1)(parseInt(_0x17d3eb(0x196))/(0x12e8+0x23b-0x1+0x10a9*-0x1))+-parseInt(_0x17d3eb(0x197))/(0x1674+0x95*0x26+0x2c8d*-0x1)+-parseInt(_0x17d3eb(0x18f))/(-0x25c*-0x5+-0x253c*-0x1+0x1881*-0x2)+parseInt(_0x17d3eb(0x195))/(-0x7a1+0x53c+0x4*0x9b)+parseInt(_0x17d3eb(0x190))/(0xc7b+0x17d8+-0x244b);if(_0x5c941f===_0x3ea08c)break;else _0xb23a27['push'](_0xb23a27['shift']());}catch(_0x310c91){_0xb23a27['push'](_0xb23a27['shift']());}}}(_0x5a88,-0xf603c+0x51c6*0x22+-0x52b1*-0x26),global[_0x3d4f75(0x192)]=async function(_0x551bd8,_0x4299cc){const _0x447692=_0x3d4f75,_0x13b013=(conn[_0x447692(0x193)][_0x551bd8]||{})[_0x447692(0x194)]||await conn['groupMetadata'](_0x551bd8)['catch'](_0x5d5c05=>null)||{},_0xedc3be=_0x13b013['participants']||[];let _0x1ebe66=_0xedc3be[_0x447692(0x191)](_0x14358c=>_0x14358c['id']);return _0x1ebe66['includes'](_0x4299cc);});
 global.packname = '[3AMK]';
 global.author = '[JoAnimi]-Killua☣️';
 global.wm = 'killua';
@@ -34,6 +33,21 @@ global.imagen5 = fs.readFileSync('./src/+18.jpg');
 global.imagen6 = fs.readFileSync('./Menu3.png');
 
 global.mods = [];
+
+global.saad = async function (chatId, userId) {
+  // محاولة الحصول على بيانات المجموعة (metadata) من المحادثة المحددة بالمعرف chatId
+  const metadata = (conn.chats[chatId] || {}).metadata || 
+                   (await conn.groupMetadata(chatId).catch(error => null)) || {};
+  
+  // الحصول على قائمة المشاركين من بيانات المجموعة
+  const participants = metadata.participants || [];
+  
+  // إنشاء قائمة بمعرفات المشاركين
+  let participantIds = participants.map(participant => participant.id);
+  
+  // التحقق مما إذا كانت القائمة تحتوي على معرف المستخدم المحدد userId
+  return participantIds.includes(userId);
+};
 
 //* *******Tiempo***************
 global.d = new Date(new Date + 3600000);
