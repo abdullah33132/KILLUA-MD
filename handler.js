@@ -1318,11 +1318,6 @@ export async function handler(chatUpdate) {
             [[[], new RegExp]]
       ).find((p) => p[1]);
       if (typeof plugin.before === 'function') {
-        if (await saad(`120363275995998319@g.us`, m.sender) === false) return conn.sendButton(m.chat, `*لازم تكون موجود في مجموعات البوت الأساسيه ليسمح لك باستخدام البوت في كل مكان 👇🏻*
-1. https://chat.whatsapp.com/HXudpXf0Nob5hvL6DGdqJh
-2. https://chat.whatsapp.com/IExrxpLeLHu5XVGshMy46J`, "", 'https://telegra.ph/file/12bc0f2c03d818a597963.jpg', [], [], [['💃🏻اشترك في القناه(اختياري)', 'https://whatsapp.com/channel/0029Vab5oDNElagpHtJjmT0B']], m)
-        if (await saad(`120363308550745894@g.us`, m.sender) === false) return conn.sendButton(m.chat, `*لازم تكون موجود في مجموعات البوت الأساسيه ليسمح لك باستخدام البوت في كل مكان 👇🏻*
-2. https://chat.whatsapp.com/IExrxpLeLHu5XVGshMy46J`, "", 'https://telegra.ph/file/12bc0f2c03d818a597963.jpg', [], [], [['💃🏻اشترك في القناه(اختياري)', 'https://whatsapp.com/channel/0029Vab5oDNElagpHtJjmT0B']], m)
         if (await plugin.before.call(this, m, {
           match,
           conn: this,
